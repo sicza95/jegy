@@ -6,14 +6,12 @@ use Stringable;
 
 class Jegy implements Stringable
 {
-    private string $jarat = "a járat kódjra pl.: FR5190.";
-    private string $legitarsasag = "a légitársaság neve.";
-    private int $ar = 0;  //forintban értelmezendő.
-    private string $honnan = "az indulási reptér neve pl.: Budapest Liszt Ferenc
-                                Nemzetközi Repülőtér (BUD).";
-    private string $hova = "a célállomás pl.:Karol Wojtyła nemzetközi repülőtér
-                            (BRI).";
-    private string $indulas = "az indulás pontos ideje.";
+    private string $jarat;
+    private string $legitarsasag;
+    private int $ar;
+    private string $honnan;
+    private string $hova;
+    private string $indulas;
 
     public function GetJarat(){
         return $this->jarat;
@@ -43,16 +41,21 @@ class Jegy implements Stringable
         $this->indulas = $indulas;
     }
 
+    public function __toString()
+    {
+        // MINTA
+        /*
+            [FR5190 - Ryanair]
+            Budapest Liszt Ferenc Nemzetközi Repülőtér (BUD) - Karol Wojtyła nemzetközi repülőtér (BRI)
+            Indulás: 2021.11.11 15:45
+            Ár: 25 000 Ft
+         */
+
+        $ar = number_format($this->ar,0, ',',' ');
+
+        return "Jarat. $this->jarat Ar: ($ar Ft)\nLegitarsasasg: $this->legitarsasag  Honnan: $this->honnan Hova: $this->hova\nIndulas: $this->indulas";
+    }
 
 }
-
-    /* Az osztály implementálja a Stringable interface-t, továbbá valósítsa meg a
-     * __toString() metódust, ami a mintának megfelelően megjeleníti az osztály
-     * tulajdonságait.
-     * A __tostring() metódusban ne alkalmazzon HTML kódot!
-     * Az ár formázásához használja a number_format metódust!   */
-
-
-
 
 ?>
