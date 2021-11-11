@@ -20,4 +20,34 @@ class Jegy
         $this->ules = $ules;
         $this->kezdes = $kezdes;
     }
+
+    public function getCim()
+    {
+        return $this->cim;
+    }
+
+    public function getAr()
+    {
+        return $this->ar;
+    }
+
+    public function getTerem()
+    {
+        return $this->terem;
+    }
+
+    public function getSor()
+    {
+        return $this->sor;
+    }
+
+    public function getUles()
+    {
+        return $this->ules;
+    }
+
+    public function getKezdes()
+    {
+        return $this->kezdes;
+    }
 }
