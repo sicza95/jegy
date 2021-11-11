@@ -55,6 +55,15 @@ class Jegy implements Stringable
 
     public function __toString()
     {
-        // TODO: Implement __toString() method.
+        // MINTA
+        /*
+            Free Guy (990 Ft)
+            Spielberg terem 11. sor 4. ülés.
+            Kezdés: 2021.11.11 15:45
+         */
+
+        $ar = number_format($this->ar,0, ',',' ');
+
+        return "$this->cim ($ar Ft)\n$this->terem terem $this->sor. sor $this->ules. ülés.\nKezdés: $this->kezdes";
     }
 }
