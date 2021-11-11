@@ -1,6 +1,6 @@
 <?php
 include_once('./src/Acme/Mozi/Jegy.php');
-include_once('./src/Acme/Repter/Jegy.php');
+include_once('./src/Acme/Repter/Jegy2.php');
 
 use Acme\Mozi\Jegy;
 use Acme\Repter\Jegy2;
