@@ -4,7 +4,7 @@ namespace Acme\Repter;
 
 use Stringable;
 
-class Jegy implements Stringable
+class Jegy2 implements Stringable
 {
     private string $jarat;
     private string $legitarsasag;
@@ -53,7 +53,7 @@ class Jegy implements Stringable
 
         $ar = number_format($this->ar,0, ',',' ');
 
-        return "[$this->jarat - $this->legitarsasag]\n$this->honnan - $this->hova\n$this->indulas\n*$ar";
+        return "[$this->jarat - $this->legitarsasag]\n$this->honnan - $this->hova\nIndulás: $this->indulas\nÁr: $ar";
     }
 
 }
