@@ -2,7 +2,9 @@
 
 namespace Acme\Mozi;
 
-class Jegy
+use Stringable;
+
+class Jegy implements Stringable
 {
     private $cim; //Szöveg, a filmnek a címe.
     private $ar; //Egész érték, forintban értelmezendő.
@@ -49,5 +51,10 @@ class Jegy
     public function getKezdes()
     {
         return $this->kezdes;
+    }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
     }
 }
