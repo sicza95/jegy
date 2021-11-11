@@ -53,7 +53,7 @@ class Jegy implements Stringable
 
         $ar = number_format($this->ar,0, ',',' ');
 
-        return "Jarat. $this->jarat Ar: ($ar Ft)\nLegitarsasasg: $this->legitarsasag  Honnan: $this->honnan Hova: $this->hova\nIndulas: $this->indulas";
+        return "[$this->jarat - $this->legitarsasag]\n$this->honnan - $this->hova\n$this->indulas\n*$ar";
     }
 
 }
